@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- saved from url=(0012)about:srcdoc -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js" crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js" crossorigin=""></script>
+    
+    
+
+  <!--<base href="https://editor.p5js.org//">--><base href="."><style>
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+</style><script src="https://editor.p5js.org/previewScripts.js"></script><style data-emotion=""></style><script>
+    function getScriptOff(line) {
+      var offs = [[54,"sketch"]];
+      var l = 0;
+      var file = '';
+      for (var i=0; i<offs.length; i++) {
+        var n = offs[i][0];
+        if (n < line && n > l) {
+          l = n;
+          file = offs[i][1];
+        }
+      }
+      return [line - l, file];
+    }
+    // catch reference errors, via http://stackoverflow.com/a/12747364/2994108
+    window.onerror = function (msg, url, lineNumber, columnNo, error) {
+        var string = msg.toLowerCase();
+        var substring = "script error";
+        var data = {};
+        if (url.match(/^(http:\/\/|https:\/\/)/) !== null && error.stack){
+          var errorNum = error.stack.split('about:srcdoc:')[1].split(':')[0];
+          var fileInfo = getScriptOff(errorNum);
+          data = msg + ' (' + fileInfo[1] + ': line ' + fileInfo[0] + ')';
+        } else {
+          var fileInfo = getScriptOff(lineNumber);
+          data = msg + ' (' + fileInfo[1] + ': line ' + fileInfo[0] + ')';
+        }
+        window.parent.postMessage([{
+          log: [{
+            method: 'error',
+            data: [data],
+            id: Date.now().toString()
+          }],
+          source: fileInfo[1]
+        }], '*');
+      return false;
+    };
+  </script></head>
+  <body>
+    <script data-tag="@fs-sketch.js">function setup() {
+  createCanvas(720, 720);
+}
+
+function draw() {
+  background("Black");
+  textSize("50");
+  text("This is a free style creation",100,50);
+  strokeWeight("5");
+  ellipse("250, 300,100,100");
+  textFont("Italic");
+  textAlign("center");
+  
+  fill(250);
+  ellipse(252, 144, 72, 72);
+  
+
+  
+  
+  fill(205);
+  triangle(23, 23, 45, 300, 80, 300);
+  
+  fill("blue");
+  strokeWeight(2);
+  ellipse(420, 260, 10 , 20);
+  
+  fill(255)
+  quad(189, 18, 216, 24, 216, 360, 144, 360)  
+  
+  fill(219)
+  arc(479, 300, 280, 290, PI, TWO_PI);
+function draw() {
+  
+  fill("grey");
+  stroke("red");
+  strokeWeight(2);
+  ellipse(280, 350, 20, 20 );
+  
+  fill(255);
+  arc(479, 300, 280, 280,PI );
+  
+}  
+}</script>
+  
+
+<canvas id="defaultCanvas0" class="p5Canvas" width="720" height="720" style="width: 720px; height: 720px;"></canvas></body></html>
